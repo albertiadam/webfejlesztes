@@ -1,0 +1,286 @@
+@font-face{
+    font-family: header;
+    src: url(fonts/JackportRegularNcv-BeY3.ttf)
+}
+
+ /* ALAPOK */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.container>*{
+    margin: 1%;
+    height: fit-content;
+}
+
+/* HEADER */
+header{
+    background-color: black;
+    width: 100%;
+    height: fit-content;
+    padding: 6px;
+    background-position: center;
+}
+
+header h1{
+    text-align: center;
+    color: white;
+    font-family: header;
+    font-size: 40px;
+    letter-spacing: 4px;
+    text-shadow: 0px 5px 3px rgba(206,0,0,0.6);
+    margin: 0;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+header hr{
+    width: 90%
+}
+
+/* MENU */
+nav {
+    padding: 6px;
+    flex: 1 1 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li a {
+    display: block;
+    padding: 6px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    background: radial-gradient(ellipse at center, #e6a8a8 0%,#ff3f3f 100%);
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+}
+
+nav ul li a.active {
+    background: black;
+    color: white;
+    border: 1px solid rgba(255, 42, 42, 0.5);
+}
+
+nav li a:hover, a.active:hover {
+    transform: scale(1.04);
+    transition: 0.5s;
+    border: 1px solid white;
+}
+
+/* BASIC TARTALOM */
+article{
+    flex: 1 1 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.705);
+    color: white;
+    text-align: justify;
+}
+
+aside{
+    background-color: rgba(255, 0, 0, 0.75);
+    padding:5px;
+    border-radius: 15px;
+    border: solid black 2px;
+    color: white;
+    flex: 1 1 100%;
+}
+
+/* TÁBLÁZATOK */
+table{
+    flex: 1 1 100%;
+}
+
+table.edzok{
+    flex-basis: 100%
+}
+
+table.footer{
+    width: 100%;
+    font-size: 14px;
+}
+
+table.footer a{
+    text-decoration: none;
+    color: white;
+}
+
+table.footer i{
+    margin: 3px;
+    color: white;
+}
+
+/* FOOTER */
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+footer p.vege{
+    font-size: 10px;
+    margin-bottom:0;
+}
+
+footer hr{
+    width: 80%;
+    margin-bottom: 15px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.394);
+    border: 0;
+}
+
+/* KÉPEK */
+img{
+    height: fit-content;
+}
+
+img.edzo{
+    border: solid black 2px;
+    border-radius: 10px;
+}
+
+/* FORMOK */
+form{
+    text-align: center;
+}
+form .input, select, div.kaloria input{
+    border: solid black 2px;
+    border-radius: 10px;
+}
+
+form .input, select.edzo{
+    width: 80%;
+    margin-top: 5px;
+}
+
+form p{
+    margin: 5px;
+}
+
+/* INDEX OLDAL */
+figure.edzoterem{
+    float: right;
+}
+
+ul.ujdonsag{
+    font-size: 20px;
+}
+
+/* EDZŐ OLDAL */
+span.edzo{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+tr.edzo{
+    text-align: center;
+}
+
+/* KALÓRIA OLDAL */
+div.kaloria{
+    text-align: center;
+}
+
+div.kaloria input,div.kaloria select{
+    width: 40%;
+}
+
+select.kaloriaaktiv{
+    margin-bottom: 15px;
+}
+
+/* TAGEK */
+h2.cim{
+    display: table;
+    text-align: left;
+    font-family: arial;
+    font-variant: small-caps;
+}
+
+/* TOVÁBBI TAGEK */
+.galleria{
+    margin: auto;
+    width: 70vw;
+    height: 90vh;
+}
+label.error{
+    color: black;
+    display: block;
+    font-weight: bold;
+}
+
+ul.felsorolas li{
+    margin: 15px;
+    list-style-type:upper-roman;
+}
+
+/* TABLET NÉZET */
+
+@media all and (min-width:600px){
+    nav ul li{
+        flex-basis: 23%;
+    }
+    nav ul{
+        justify-content: space-between;
+        display: flex;
+        font-size: 0.9em;
+    }
+    aside{
+        flex-basis: 98%;
+    }
+}
+
+/* ASZTALI NÉZET */
+
+@media all and (min-width: 768px){
+    nav ul li{
+        flex-basis: 23%;
+    }
+    nav ul{
+        justify-content: space-between;
+        display: flex;
+        font-size: 1em;
+    }
+    article{
+        flex-basis: 73%;
+        justify-content: space-between;
+    }
+    aside{
+        flex-basis: 18%;
+    }
+    table.edzok{
+        width: 75%;
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.png">
+    <meta name="author" content="Alberti Ádám">
+    <meta name="description" content="Power Gym nevű edzőteremről szóló weboldal">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Edzőink</title>
+    <script src="validation/jquery-3.7.1.min.js"></script>
+    <script src="validation/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("#edzoform").validate({
+            rules: {
+                nev: "required",
+                kor: "required",
+                email: {
+                required: true,
+                email: true
+                },
+                telszam: "required",
+                elfogadas: "required",
+                datum: "required",
+                },
+                messages: {
+                    nev: "Írd be a neved",
+                    kor: "Írd be a korod",
+                    telszam: "Írd be a telefonszámodat",
+                    email: "Kérlek valós email címet adj meg!",
+                    elfogadas: "Kérem fogadja el a felhasználási feltételeket",
+                    datum: "Add meg a kívánt kezdés dátumát",
+                    },
+        });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <hr><h1><a href="index.html">Power Gym</a></h1><hr>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdő oldal</a></li>
+                <li><a class="active" href="#">Edzők</a></li>
+                <li><a href="galeria.html">Galéria</a></li>
+                <li><a href="kaloria.html">A kalóriákról</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h2 class="cim">Személyi edzőre van szükséged?</h2>
+            <section>
+                <p>Fedezze fel szakértő személyi edzőink világát, akik elkötelezettek az Ön sikerében és testi fejlődésében. Minden személyi edzőnk magas szintű szakértelemmel rendelkezik, és elkötelezett abban, hogy segítsen Önnek elérni a céljait.</p>
+
+                <p>Miért válassza személyi edzőinket?</p>
+                <ul class="felsorolas">
+                    <li><b>Személyre szabott edzésprogramok:</b> Minden egyes edzéstervet az Ön egyedi igényeihez és céljaihoz igazítunk.</li>
+                    <li><b>Motiváció és támogatás:</b> Személyi edzőink nemcsak az edzőtermi munka során, hanem azon kívül is támogatják Önt, hogy fenntartsa motivációját és kitartását.</li>
+                    <li><b>Szaktudás és tapasztalat:</b> Kiváló szakembereink a legújabb fitnesz-trendek és edzésmódszerek terén is naprakészek, így garantáljuk, hogy Ön a legjobb úton halad a céljai felé.</li>
+                </ul>
+                <p>Ne hagyja, hogy a fitneszút egyedül járja be. Forduljon személyi edzőinkhez, és tapasztalja meg a személyre szabott támogatás erejét az edzéseiben!</p>
+                <h2 class="cim">Legkiemelkedőbb edzőink</h2>
+                <table class="edzok">
+                    <tr class="edzo">
+                        <td><img class="edzo" src="pics/edzok/edzo1.png" title="Erős Előd"></td>
+                        <td><span class="edzo">Erős Előd</span><br>Calisthenics</td>
+                        <td>Szenvedélyem a testmozgás és a szabadság érzése, amit a Calisthenics kínál.</td>
+                    </tr>
+                    <tr class="edzo">
+                        <td><img class="edzo" src="pics/edzok/edzo2.png" title="Kis Pál"></td>
+                        <td><span class="edzo">Kis Pál</span><br>Testépítés</td>
+                        <td>Szeretem ezt a munkát, mert lehetőségem van inspirálni az embereket, és segíteni nekik elérni a legjobb formájukat.</td>
+                    </tr>
+                    <tr class="edzo">
+                        <td><img class="edzo" src="pics/edzok/edzo3.png" title="Aranyos Anna"></td>
+                        <td><span class="edzo">Aranyos Anna</span><br>Cross fit</td>
+                        <td>CrossFit edzőként azért imádom ezt a szakmát, mert minden nap láthatom az emberekben a változást és az erő fejlődését.</td>
+                    </tr>
+                </table>
+                <h2 class="cim">A személyedzés menete</h2>
+                <ul class="felsorolas">
+                    <li><b>Konzultáció: </b>Minden személyi edzés egyéni konzultációval kezdődik. Ebben a fázisban részletesen megbeszéljük az Ön céljait, az egészségi állapotát, korábbi edzési tapasztalatait és egyéb fontos tényezőket. Ez az első lépés annak érdekében, hogy a személyi edzőnk számára világos képet kapjunk arról, hogy hogyan segíthetünk Önnek a legjobban.</li>
+                    <li><b>Testösszetétel és Értékelés: </b>Ezután egy részletes testösszetétel elemzést és értékelést végezünk el. Ennek célja, hogy meghatározzuk az Ön testi állapotát, erősségeit és területeit, amelyeken fejlődésre van szükség. Ez segít abban, hogy személyre szabott edzéstervet készítsünk Önnek.</li>
+                    <li><b>Személyre Szabott Edzésterv: </b>A konzultáció és értékelés alapján személyre szabott edzéstervet készítünk, figyelembe véve az Ön egyedi szükségleteit és célokat. Az edzésterv magában foglalja a kardió, erőnlét és funkcionális gyakorlatok kombinációját, hogy teljes körű és hatékony edzést biztosítsunk.</li>
+                    <li><b>Edzések Felügyelete: </b>A személyi edzők folyamatosan felügyelik Önt az edzések során, biztosítva, hogy helyes technikát alkalmazzon, és maximalizálja az eredményeket. Motivációt és támogatást nyújtanak, hogy inspirálják Önt az edzések folyamán.</li>
+                    <li><b>Fejlődés Követése: </b>Rendszeresen ellenőrizzük az előrehaladást, és szükség esetén módosítjuk az edzéstervet. A cél az, hogy folyamatosan fejlődjön és elérd az edzési céljait.</li>
+                </ul>
+            </section>
+        </article>
+        <aside>
+            <h2 class="cim">Töltsd ki a formot!</h2>
+            <form id="edzoform" method="post" action="http://szamtud.uni-corvinus.hu/receive.php">
+            <p><label>Add meg a neved:<br><input type="text" name="nev" placeholder="Gipsz Jakab" class="input"></label></p>
+            <p><label>Add meg a korod:<br><input type="number" name="kor" placeholder="18" class="input"></label></p>
+            <p><label>Add meg a telefonszámod:<br><input type="text" name="telszam" placeholder="01-23-456-7891" class="input"></label></p>
+            <p><label>Add meg az email címed:<br><input type="email" name="email" placeholder="pelda@pelda.com" class="input"></label></p>
+            <p><label>Add meg a kezdés dátumát:<br><input type="date" name="datum" class="input"></label></p>
+            <label>Add meg milyen szinten vagy:
+                <select class="edzo" name="szint">
+                    <option value="kezdo">Kezdő</option>
+                    <option value="kozephalado">Középhaladó</option>
+                    <option value="halado">Haladó</option>
+                </select>
+            </label>
+            <p><b>Preferenciák:</b></p>
+            <p>Férfi vagy női edzőt szeretnél?</p>
+            <label><input type="radio" name="edzonem" value="ferfi">Férfi</label><br>
+            <label><input type="radio" name="edzonem" value="no">Nő</label><br>
+            <p>Mi a célod?</p>
+            <label><input type="radio" name="cel" value="fogyas">Fogyás</label><br>
+            <label><input type="radio" name="cel" value="izomnoveles">Izomtömegnövelés</label><br>
+            <label><input type="radio" name="cel" value="megismerni">Megismerni az edzőtermi edzés alapjait</label><br>
+            <label><input type="radio" name="cel" value="rehab">Rehabilitáció</label><br>
+            <label><input type="radio" name="cel" value="altalanos">Általános jólétből való edzés</label><br>
+            <br>
+            <label>Elfogadja a felhasználási feltételeket?<input type="checkbox" name="elfogadas"></label>
+            <input type="submit" value="Küldés">
+            <input type="reset" value="Törlés">
+            </form>
+        </aside>
+    </div>
+    <footer>
+        <table class="footer">
+            <tr>
+                <td>Online felületek</td>
+                <td>Elérhetőség</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.x.com/"><i class="fa fa-twitter"></i></a>
+                </td>
+                <td><a href="mailto:powergym@pelda.hu">powergym@pelda.hu</a></td>
+            </tr>
+        </table>
+        <hr>
+        <p class="vege">Az oldal gyakorlás céjából jött létre - Alberti Ádám 2023</p>
+    </footer>
+</body>
+</html>

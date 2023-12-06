@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.png">
+    <meta name="author" content="Alberti Ádám">
+    <meta name="description" content="Power Gym nevű edzőteremről szóló weboldal">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Galéria</title>
+    <script src="gallery/jquery-3.7.1.js"></script>
+    <script src="gallery/galleria-1.6.1/dist/galleria.js"></script>
+    <script src="gallery/galleria-1.6.1/dist/themes/classic/galleria.classic.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#images').galleria(
+                width=500,
+                height=500
+            )           
+        }
+        )   
+    </script>
+</head>
+<body>
+    <header>
+        <hr><h1><a href="index.html">Power Gym</a></h1><hr>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdő oldal</a></li>
+                <li><a href="edzok.html">Edzők</a></li>
+                <li><a class="active" href="#">Galéria</a></li>
+                <li><a href="kaloria.html">A kalóriákról</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h2 class="cim">Galéria</h2>
+            <p>Az alábbi képeken edzés közbeni pillanatképeket, felszereléseket és feladat kivitelezéseket láthatsz.</p>
+            <section id="images" class="galleria">
+                <img src="pics/galeria/1.jpeg" alt="Felhúzást végző ember" title="Edzés közbeni pillanatkép">
+                <img src="pics/galeria/2.webp" alt="Kettlebell edzés" title="Edzés közbeni pillanatkép">
+                <img src="pics/galeria/3.webp" alt="TRX edzés" title="Edzésközbeni pillanatkép">
+                <img src="pics/galeria/4.webp" alt="Kézisúlyok" title="Felszerelések">
+                <img src="pics/galeria/5.webp" alt="Edzést végző hölgy" title="Beállított edzőtermi kép">
+                <img src="pics/galeria/6.jpeg" alt="Húzodzkodás" title="Edzés közbeni pillanatkép">
+                <img src="pics/galeria/7.jpeg" alt="Fekvőtámasz" title="Edzőtermi kép">
+                <img src="pics/galeria/8.webp" alt="Kitörés" title="Edzőtermi kép">
+                <img src="pics/galeria/9.jpeg" alt="Koncentrált bicepsz" title="Edzőtermi kép">
+            </section>
+        </article>
+        <aside>
+            <h2 class="cim">Galériánk</h2>
+            <p>Képeink segítségével betekintést nyerhetsz edzőtermünk dinamikus és inspiráló világába. A galériában olyan pillanatokat örökítettünk meg, amelyek megmutatják, miért érdemes választanod minket az egészséges életmód és az edzés elkötelezett támogatójaként.</p>
+
+            <p>Fedezd fel modern és jól felszerelt edzőtermünk minden szegletét, ahol a kényelmes környezet és a legújabb fitness technológiák ötvöződnek. Az instruktoraink segítségével személyre szabott edzésprogramokat kínálunk, hogy minden tagunk elérhesse a saját céljait, legyen az alakformálás, erőnlét növelés vagy egyszerűen a mindennapi stressz levezetése.</p>
+            
+            <p>A galéria képei által belekóstolhatsz azokba az élményekbe, amelyek várják, amikor csatlakozol hozzánk. Színes és motiváló légkör, barátságos közösség és a legmodernebb felszerelések - mindez egy helyen, hogy a tested és lelked is teljes egészében felkészülhessen a változásra.</p>
+            
+            Csatlakozz hozzánk, és tapasztald meg az Power Gym Edzőterem életstílusát!
+        </aside>
+    </div>
+    <footer>
+        <table class="footer">
+            <tr>
+                <td>Online felületek</td>
+                <td>Elérhetőség</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.x.com/"><i class="fa fa-twitter"></i></a>
+                </td>
+                <td><a href="mailto:powergym@pelda.hu">powergym@pelda.hu</a></td>
+            </tr>
+        </table>
+        <hr>
+        <p class="vege">Az oldal gyakorlás céjából jött létre - Alberti Ádám 2023</p>
+    </footer>
+</body>
+</html>

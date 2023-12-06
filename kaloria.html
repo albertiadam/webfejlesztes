@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.png">
+    <meta name="author" content="Alberti Ádám">
+    <meta name="description" content="Power Gym nevű edzőteremről szóló weboldal">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>A kalóriák</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <hr><h1><a href="index.html">Power Gym</a></h1><hr>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdő oldal</a></li>
+                <li><a href="edzok.html">Edzők</a></li>
+                <li><a href="galeria.html">Galéria</a></li>
+                <li><a class="active" href="#">A kalóriákról</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h2 class="cim">A kalóriák fontossága</h2>
+            <p>Ahhoz, hogy sikeresen elérjük fitnesscélcéljainkat, fontosnak tartjuk, hogy megértsük testünk működését és annak energiaigényét. A kalóriák ebben játszanak kulcsfontosságú szerepet. Egyszerűen szólva, a kalória egység az energia mérésére, és minden, amit elfogyasztunk vagy elégetünk, ebben a mértékegységben fejezhető ki.</p>
+
+            <p>A kalóriák megfelelő számának megtartása kulcsfontosságú az egészségünk és a fitnesscélok elérésében. Ha több kalóriát fogyasztunk, mint amennyit elégetünk, súlygyarapodáshoz vezethet. Ellenkező esetben, ha kevesebbet fogyasztunk, mint amennyit elégetünk, fogyás következhet be.</p>
+
+            <p>A konditeremben végzett edzések kiváló módszert kínálnak a kalóriák elégetésére, és segítenek formálni a testet. Különböző edzésformák és intenzitások eltérő mértékű kalóriafelhasználást eredményeznek, és személyre szabott edzéstervvel hatékonyabban érhetjük el céljainkat.</p>
+
+            <p>Az itt található információk és szolgáltatások segítenek abban, hogy megfelelően kezeljük a kalóriabevitelünket és -felhasználásunkat, így elérhetjük a kívánt testi és egészségügyi célokat. Ne feledd, a kalóriák nem ellenségeink, hanem az energiaforrásaink, amelyek segítenek bennünket a kitűzött célok elérésében.</p>
+
+            <br><p><b>Az alábbi kalóriaszámló segítségével kiszámolhatod a napi fenntartáshoz szükséges kalóriádat</b></p>
+            <div class="kaloria">
+                <label>Nem<br>
+                <select id="nem">
+                    <option value="ferfi">Férfi</option>
+                    <option value="no">Nő</option>
+                </select></label>
+                <p><label>Magasság (cm)<br><input class="input" type="number" id="magassag"></label></p>
+                <p><label>Súly (kg)<br><input class="input" type="number" id="suly"></label></p>
+                <p><label>Kor (év)<br><input class="input" type="number" id="kor"></label></p>
+                <label>Heti aktivitás:<br>
+                <select class="kaloriaaktiv" id="aktivitas">
+                    <option value="1.2">Ülő típus (nem végez testmozgást)</option>
+                    <option value="1.375">Enyhén aktív (heti 1-2 kis intenzitású testmozgás)</option>
+                    <option value="1.55">Közepesen aktív (heti 2-3 közepes intenzitású testmozgás)</option>
+                    <option value="1.725">Nagyon aktív (heti 3-4 magasabb intenzitású testmozgás)</option>
+                    <option value="1.9">Extra aktív (heti 4-6 magas intenzitású edzés vagy fizikai munka)</option>
+                </select></label><br>
+                <label>Válaszd ki, hogy tömegelés, fogyás vagy fenntartás a cél:<br>
+                    <select id="mod">
+                        <option value="0">Fenntartás</option>
+                        <option value="200">Tömegelés</option>
+                        <option value="-200">Fogyás</option>
+                    </select>
+                </label>
+                <br><button onclick="szamlalas()">Számol</button>
+                <p>A napi fenntartáshoz szükséges kalóriád:</p>
+                <p id="kesz"></p>
+            </div>
+        </article>
+        <aside>
+            <h2 class="cim">A különböző kalóriatípusok</h2>
+            <p><b>Makrótápanyagok</b></p>
+            <ul>
+                <li><b>Fehérjék:</b> Az izomépítés és a sejtfunkciók alapvető építőkövei. Minden gramm fehérje 4 kalóriát tartalmaz.</li>
+                <li><b>Szénhidrátok:</b> Az energiatermelés fő forrásai, különösen a testmozgás során. 1 gramm szénhidrát 4 kalóriát ad.</li>
+                <li><b>Zsírok:</b> Hosszú távú energiaforrások és fontos sejtfunkciókhoz. Minden gramm zsír 9 kalóriát tartalmaz.</li>
+            </ul>
+            <p><b>Mikrótápanyagok</b></p>
+            <ul>
+                <li><b>Vitaminok és ásványi anyagok:</b> Kisebb mennyiségben szükségesek, de elengedhetetlenek a szervezet számára az optimális működéshez. Nem rendelkeznek önálló kalóriaértékkel.</li>
+            </ul>
+            <p><b>Üres kalóriák</b></p>
+            <ul>
+                <li><b>Magas cukor- és zsírtartalmú élelmiszerek:</b> Olyan ételek és italok, amelyek magas kalóriatartalmúak, de kevés tápanyagot tartalmaznak. Ide tartoznak az édességek, üdítőitalok és feldolgozott élelmiszerek.</li>
+            </ul>
+        </aside>
+    </div>
+    <footer>
+        <table class="footer">
+            <tr>
+                <td>Online felületek</td>
+                <td>Elérhetőség</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.x.com/"><i class="fa fa-twitter"></i></a>
+                </td>
+                <td><a href="mailto:powergym@pelda.hu">powergym@pelda.hu</a></td>
+            </tr>
+        </table>
+        <hr>
+        <p class="vege">Az oldal gyakorlás céjából jött létre - Alberti Ádám 2023</p>
+    </footer>
+</body>
+</html>
