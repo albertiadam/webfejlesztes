@@ -171,6 +171,10 @@ img.edzo{
     border-radius: 10px;
 }
 
+img.fokep{
+    width: 100%;
+}
+
 /* FORMOK */
 form{
     text-align: center;
